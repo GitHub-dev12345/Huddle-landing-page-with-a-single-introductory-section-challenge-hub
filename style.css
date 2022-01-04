@@ -111,6 +111,7 @@ main a:hover{
   .attribution a {
     text-decoration: none;
     color: red;
+    font-weight: 400;
 }
 
 /* Responsive webpage dektop & mobile version css code */
