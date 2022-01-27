@@ -8,8 +8,9 @@
     padding: 0;
 }
 
+/* Body Design CSS Code */
 body{
-    width: 1440px;
+    max-width: 1440px;
     margin: auto;
     background-image: url("images/bg-desktop.svg");
     background-color: hsl(257, 40%, 49%);
@@ -19,11 +20,12 @@ body{
 /* header tag css */
 header{
     margin-left: 30px;
-    margin-top: 70px;
+    margin-top: 50px;
     margin-bottom: 70px;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Header Image CSS Code */
 header img{
     width: 200px;
 }
@@ -33,7 +35,6 @@ main{
     display: flex;
     margin-left: 30px;
 }
-
 
 /* section box css code */
 section{
@@ -85,7 +86,9 @@ main a:hover{
 /* social media icon css code */
 footer .social{
     float: right;
-    margin-right: 100px;
+    margin-right: 50px;
+    margin-top: -5px;
+    /* border: 1px solid black; */
 }
 
 .icons{
@@ -98,22 +101,26 @@ footer .social{
 }
 
 /* in footer attribution css code */
-footer .attribution {
-    font-size: 11px;
-    float: left;
+footer>p {
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 30px;
-    font-size: 12px;
     color: wheat;
     font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
-footer .attribution a {
+footer >p a {
+    color: black;
+    font-weight: 600;
+}
+
+footer >p a:hover{
     text-decoration: none;
-    color: red;
-    font-weight: 400;
+    color: orange;
 }
-
 /* Responsive webpage dektop & mobile version css code */
 
 @media screen and (max-width: 1300px) {
@@ -146,17 +153,30 @@ footer .attribution a {
         margin: auto;
         padding: 20px;
     }
-
+}
+@media screen and (max-width: 540px) {
+    .box2>h1{
+        text-align: center;
+    }
+}
 @media screen and (max-width: 400px) {
+    footer .social{
+        width: 100%;
+        text-align: center;
+        margin: -30px auto;
+        transition: 0.3s;
+    }
     section h1{
         font-size: 1.4rem;
         text-align: center;
+        transition: 0.3s;
     }
     
     section p{
         font-size: 15px;
         text-align: center;
         margin-bottom: 10px;
+        transition: 0.3s;
     }
 
     main a{
@@ -164,15 +184,18 @@ footer .attribution a {
         font-size: 12px;
         padding: 10px;
         box-shadow: 0px 3px 6px 0px black;
+        transition: 0.3s;
     }
 
     .social{
         margin-right: 130px;
+        transition: 0.3s;
     }
 
     .icons{
-        width: 30px;
+        width: 43px;
+        transition: 0.3s;
     }
 }
 
-}
+
