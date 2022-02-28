@@ -5,29 +5,36 @@
 /* font-family: 'Open Sans', sans-serif; */
 
 // Nesting SCSS/CSS
+// CSS Reset 
 * {
     margin: 0;
     padding: 0;
 }
+
+// Body Design CSS Code
 body{
     max-width: 1440px;
     margin: auto;
     background: url('/images/bg-desktop.svg') no-repeat hsl(257, 40%, 49%);
 
+    // header tag css
     header{
         margin-left: 30px;
         margin-top: 50px;
         margin-bottom: 70px;
         font-family: 'Poppins', sans-serif;
 
+        // Header Image CSS Code
         img{
             width: 200px;
         }
     }
+    // main box design css code
     main{
         display: flex;
         margin-left: 30px;
 
+        // section box css code
         section{
             display: flex;
             flex-direction: column;
@@ -47,6 +54,7 @@ body{
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 400;
             }
+            // In main box anchor tag css code 
             a{
                 text-decoration: none;
                 text-align: center;
