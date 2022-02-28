@@ -102,24 +102,24 @@ footer .social{
 
 /* in footer attribution css code */
 footer>p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 30px;
     color: wheat;
     font-weight: bold;
-    letter-spacing: 1px;
+    word-spacing: 2px;
     cursor: pointer;
 }
 
 footer >p a {
-    color: black;
+    color: orange;
     font-weight: 600;
 }
 
 footer >p a:hover{
     text-decoration: none;
-    color: orange;
+    color: red;
 }
 /* Responsive webpage dektop & mobile version css code */
 
