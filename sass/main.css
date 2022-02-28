@@ -80,6 +80,10 @@ body main section a:hover {
   background-color: #e882e8;
 }
 
+body footer {
+  /* In footer tag attribution scss code */
+}
+
 body footer .social {
   float: right;
   margin-right: 50px;

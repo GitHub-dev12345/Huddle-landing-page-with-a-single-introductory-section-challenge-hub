@@ -11,7 +11,7 @@
     padding: 0;
 }
 
-// Body Design CSS Code
+// Body Design sCSS Code
 body{
     max-width: 1440px;
     margin: auto;
@@ -24,17 +24,17 @@ body{
         margin-bottom: 70px;
         font-family: 'Poppins', sans-serif;
 
-        // Header Image CSS Code
+        // Header Image sCSS Code
         img{
             width: 200px;
         }
     }
-    // main box design css code
+    // main box design scss code
     main{
         display: flex;
         margin-left: 30px;
 
-        // section box css code
+        // section box scss code
         section{
             display: flex;
             flex-direction: column;
@@ -54,7 +54,7 @@ body{
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 400;
             }
-            // In main box anchor tag css code 
+            // In main box anchor tag scss code 
             a{
                 text-decoration: none;
                 text-align: center;
@@ -78,6 +78,7 @@ body{
         }
     }
     footer{
+        // In Footer Tag .social Box media icon scss code
         .social{
             float: right;
             margin-right: 50px;
@@ -96,6 +97,7 @@ body{
                 }
             }
         }
+        /* In footer tag attribution scss code */
         p{
             font-size: 0.95rem;
             font-family: Arial, Helvetica, sans-serif;
