@@ -15,7 +15,9 @@
 body{
     max-width: 1440px;
     margin: auto;
-    background: url("../images/bg-desktop.svg") no-repeat hsl(257, 40%, 49%);
+    background-image: url('/images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: hsl(257, 40%, 49%);
 
     // header tag css
     header{
