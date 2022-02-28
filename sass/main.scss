@@ -1,0 +1,202 @@
+// Google fonts 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+
+// Nesting SCSS/CSS
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 1440px;
+    margin: auto;
+    background: url('/images/bg-desktop.svg') no-repeat hsl(257, 40%, 49%);
+
+    header{
+        margin-left: 30px;
+        margin-top: 50px;
+        margin-bottom: 70px;
+        font-family: 'Poppins', sans-serif;
+
+        img{
+            width: 200px;
+        }
+    }
+    main{
+        display: flex;
+        margin-left: 30px;
+
+        section{
+            display: flex;
+            flex-direction: column;
+            margin: 130px;
+            margin-top: 50px;
+            margin-left: 50px;
+
+            h1{
+                font-size: 2.5rem;
+                color: white;
+                font-family: 'Poppins', sans-serif; 
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 18px;
+                color: wheat;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+            }
+            a{
+                text-decoration: none;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                color: hsl(257, 40%, 49%);
+                background-color: whitesmoke;
+                padding: 18px;
+                margin: 20px;
+                margin-left: 0;
+                width: 30%;
+                border-radius: 100px;
+                cursor: pointer;
+                box-shadow: 0px 5px 10px 0px black;
+
+                &:hover{
+                    color: white;
+                    background-color: hsl(300, 69%, 71%);
+                }
+            }
+        }
+    }
+    footer{
+        .social{
+            float: right;
+            margin-right: 50px;
+            margin-top: -5px;
+            span{
+                a{
+                    .icons{
+                        width: 43px;
+                        margin-right: 6px;
+                        cursor: pointer;
+
+                        &:hover{
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+        p{
+            font-size: 0.95rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 30px;
+            color: wheat;
+            font-weight: bold;
+            word-spacing: 2px;
+            cursor: pointer;
+
+            a{
+                color: orange;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:hover{
+                    text-decoration: none;
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive webpage dektop & mobile version scss code */
+@media screen and (max-width: 1300px){
+    body{
+        background-image: url("images/bg-mobile.svg");
+        width: auto;
+
+        header{
+            margin: auto;
+            padding: 30px;
+
+            img{
+                width: 150px;
+            }
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding: 30px;
+
+            section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                padding: 20px;
+
+                p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 540px){
+    body{
+        main{
+            .box2{
+                h1{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px){
+    body{
+        main{
+            section{
+                h1{
+                    font-size: 1.4rem;
+                    text-align: center;
+                    transition: 0.3s; 
+                }
+                p{
+                    font-size: 15px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    transition: 0.3s;
+                }
+                a{
+                    width: 60%;
+                    font-size: 12px;
+                    padding: 10px;
+                    box-shadow: 0px 3px 6px 0px black;
+                    transition: 0.3s;
+                }
+            }
+        }
+        footer{
+            .social{
+                width: 100%;
+                text-align: center;
+                margin: -30px auto;
+                transition: 0.3s;
+                span{
+                    a{
+                        .icons{
+                            width: 43px;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  background: url("/images/bg-desktop.svg") no-repeat #674baf;
+}
+
+body header {
+  margin-left: 30px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body header img {
+  width: 200px;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+}
+
+body main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 130px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+body main section h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+body main section p {
+  font-size: 18px;
+  color: wheat;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+body main section a {
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #674baf;
+  background-color: whitesmoke;
+  padding: 18px;
+  margin: 20px;
+  margin-left: 0;
+  width: 30%;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 10px 0px black;
+          box-shadow: 0px 5px 10px 0px black;
+}
+
+body main section a:hover {
+  color: white;
+  background-color: #e882e8;
+}
+
+body footer .social {
+  float: right;
+  margin-right: 50px;
+  margin-top: -5px;
+}
+
+body footer .social span a .icons {
+  width: 43px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+body footer .social span a .icons:hover {
+  opacity: 0.5;
+}
+
+body footer p {
+  font-size: 0.95rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 30px;
+  color: wheat;
+  font-weight: bold;
+  word-spacing: 2px;
+  cursor: pointer;
+}
+
+body footer p a {
+  color: orange;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+body footer p a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+/* Responsive webpage dektop & mobile version scss code */
+@media screen and (max-width: 1300px) {
+  body {
+    background-image: url("images/bg-mobile.svg");
+    width: auto;
+  }
+  body header {
+    margin: auto;
+    padding: 30px;
+  }
+  body header img {
+    width: 150px;
+  }
+  body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    padding: 30px;
+  }
+  body main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    padding: 20px;
+  }
+  body main section p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  body main .box2 h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body main section h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  body main section p {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  body main section a {
+    width: 60%;
+    font-size: 12px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 3px 6px 0px black;
+            box-shadow: 0px 3px 6px 0px black;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  body footer .social {
+    width: 100%;
+    text-align: center;
+    margin: -30px auto;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  body footer .social span a .icons {
+    width: 43px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+/*# sourceMappingURL=main.css.map */
