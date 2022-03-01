@@ -1,0 +1,104 @@
+// Mixing SCSS 
+// In Main Box (Register) Button Mixing Code
+@mixin anchor {
+    width: 29%;
+    font-size: 1.3vw;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: hsl(257, 40%, 49%);
+    background-color: whitesmoke;
+    padding: 15px 20px 15px 20px;
+    margin: 20px 5px 20px 5px;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0,0,0, 0.5);
+}
+
+// Flex-Box Mixing Code
+@mixin flexBox($dr, $jc, $al ) {
+    display: flex;
+    flex-direction: $dr;
+    justify-content: $jc;
+    align-items: $al;
+}
+
+// In main h1 tag Mixing Code
+@mixin mainh1 {
+    font-size: 2.8vw;
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    margin: 0px 0px 20px 0px;
+}
+
+// In main P tag Heading Mixing Code
+@mixin mainP {
+    font-size: 1.3vw;
+    color: white;
+    opacity: 0.8;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    padding-right: 35px;
+}
+
+// In footer .social class Mixing Code
+@mixin fosocial {
+    float: right;
+    margin-right: 50px;
+    margin-top: -5px;
+}
+
+// In footer P tag Mixing Code
+@mixin footerP {
+    font-size: 0.95rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    color: wheat;
+    font-weight: bold;
+    word-spacing: 2px;
+    cursor: pointer;
+}
+
+
+// Mixing Codes
+//450px Responsive Mixing Codes
+// Section h1 tag mixing code
+@mixin sech1 {
+    font-size: 6.5vw;
+    text-align: center;
+    transition: 0.3s; 
+}
+
+// Section P tag mixing code
+@mixin secP {
+    font-size: 3.93vw;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    transition: 0.3s;
+}
+
+// Section anchor teg Mixing Code (Register button)
+@mixin register {
+    width: 60%;
+    font-size: 12px;
+    padding: 10px;
+    box-shadow: 0px 3px 6px 0px black;
+    transition: 0.3s;
+}
+
+// Footer .social class Mixing Code
+@mixin footerSocial {
+    width: 100%;
+    text-align: center;
+    margin: -30px auto;
+    transition: 0.3s;
+}
+
+// In footer tag social image mixing code 
+@mixin SocialIcon {
+    width: 43px;
+    transition: 0.3s;
+}
+
+
