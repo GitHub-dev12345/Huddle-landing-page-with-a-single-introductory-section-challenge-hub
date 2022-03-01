@@ -7,8 +7,6 @@
 // Partial Files 
 @import "_mixing";
 
-
-// Nesting SCSS/CSS
 // CSS Reset 
 * {
     margin: 0;
@@ -20,39 +18,29 @@ body{
     margin: auto;
     background: url('../images/bg-desktop.svg') no-repeat hsl(257, 40%, 49%);
     background-size: 90%;
-
-    // header tag css
     header{
         margin : 55px 0px 80px 60px;
         font-family: 'Poppins', sans-serif;
-
-        // Header Image sCSS Code
         img{
             width: 240px;
         }
     }
-    // main box design scss code
     main{
         display: flex;
         margin: 50px 50px 0px 70px;
         img{
             width: 140%;
         }
-
-        // section box scss code
         section{
             display: flex;
             flex-direction: column;
             margin: 50px 0px 50px 65px;
-
             h1{
                 @include mainh1;
             }
-
             p{
                 @include mainP;
             }
-            // In main box anchor tag scss code 
             a{
                 @include anchor;
                 &:hover{
@@ -66,7 +54,6 @@ body{
         }
     }
     footer{
-        // In Footer Tag .social Box media icon scss code
         .social{
             @include fosocial;
             a{
@@ -83,20 +70,16 @@ body{
                 }
             }
         }
-        // In footer tag attribution scss code
         p{
             @include footerP;
-
             a{
                 color: orange;
                 font-weight: 600;
                 cursor: pointer;
-
                 &:hover{
                     text-decoration: none;
                     color: red;
                 }
-
                 &:hover{
                     opacity: 0.5;
                 }
@@ -111,7 +94,6 @@ body{
         header{
             margin: auto;
             padding: 30px;
-
             img{
                 width: 150px;
             }
@@ -121,22 +103,18 @@ body{
             flex-direction: column;
             margin: auto;
             padding: 30px;
-
             img{
                 width: 80%;
                 margin: -20px auto;
             }
-
             section{
                 @include flexBox(column, center, center);
                 margin: 50px auto;
                 padding: 20px;
-
                 h1{
                     font-size: 35px;
                     text-align: center;
                 }
-
                 p{
                     font-size: 18px;
                     text-align: center;
