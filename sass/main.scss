@@ -18,180 +18,165 @@ body{
     margin: auto;
     background: url('../images/bg-desktop.svg') no-repeat hsl(257, 40%, 49%);
     background-size: 90%;
-    header{
-        margin : 55px 0px 80px 60px;
-        font-family: 'Poppins', sans-serif;
-        img{
-            width: 240px;
+}
+
+header{
+    margin : 55px 0px 80px 60px;
+    font-family: 'Poppins', sans-serif;
+    img{
+        width: 240px;
+    }
+}
+main{
+    display: flex;
+    margin: 50px 50px 0px 70px;
+    img{
+        width: 140%;
+    }
+}
+section{
+    display: flex;flex-direction: column;
+    margin: 50px 0px 50px 65px;
+    h1{
+        @include mainh1;
+    }
+    p{
+        @include mainP;
+    }
+    a{
+        @include anchor;
+        &:hover{
+            color: white;
+            background-color: hsl(300, 69%, 71%);
+        }
+        &:focus-visible{
+            opacity: 0.6;
         }
     }
-    main{
-        display: flex;
-        margin: 50px 50px 0px 70px;
-        img{
-            width: 140%;
-        }
-        section{
-            display: flex;
-            flex-direction: column;
-            margin: 50px 0px 50px 65px;
-            h1{
-                @include mainh1;
-            }
-            p{
-                @include mainP;
-            }
-            a{
-                @include anchor;
-                &:hover{
-                    color: white;
-                    background-color: hsl(300, 69%, 71%);
-                }
-                &:focus-visible{
-                    opacity: 0.6;
-                }
-            }
-        }
+}
+.social{
+    @include fosocial;
+}
+.icons{
+    width: 43px;
+    margin-right: 6px;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
     }
-    footer{
-        .social{
-            @include fosocial;
-            a{
-                .icons{
-                    width: 43px;
-                    margin-right: 6px;
-                    cursor: pointer;
-                    &:hover{
-                        opacity: 0.7;
-                    }
-                    &:focus-visible{
-                        opacity: 0.5;
-                    }
-                }
-            }
+    &:focus-visible{
+        opacity: 0.5;
+    }
+}
+.attribution{
+    @include footerP;
+    a{
+        color: orange;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover{
+            text-decoration: none;
+            color: red;
         }
-        p{
-            @include footerP;
-            a{
-                color: orange;
-                font-weight: 600;
-                cursor: pointer;
-                &:hover{
-                    text-decoration: none;
-                    color: red;
-                }
-                &:hover{
-                    opacity: 0.5;
-                }
-            }
+        &:hover{
+            opacity: 0.5;
         }
     }
 }
 
+
+
 // Responsive webpage dektop & mobile version scss code
 @media screen and (max-width: 1140px){
-    body{
-        header{
-            margin: auto;
-            padding: 30px;
-            img{
-                width: 150px;
-            }
+    header{
+        margin: auto;
+        padding: 30px;
+        img{
+            width: 150px;
         }
-        main{
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-            padding: 30px;
-            img{
-                width: 80%;
-                margin: -20px auto;
-            }
-            section{
-                @include flexBox(column, center, center);
-                margin: 50px auto;
-                padding: 20px;
-                h1{
-                    font-size: 35px;
-                    text-align: center;
-                }
-                p{
-                    font-size: 18px;
-                    text-align: center;
-                    padding: 0px;
-                }
-                a{
-                    font-size: 1.9vw;
-                    padding: 15px 20px 15px 20px;
-                }
-            }
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 30px;
+        img{
+            width: 80%;
+            margin: -20px auto;
         }
-        footer{
-            p{
-                position: relative;
-                top: 40px;
-            }
+    }
+    section{
+        @include flexBox(column, center, center);
+        margin: 50px auto;
+        padding: 20px;
+        h1{
+            font-size: 35px;
+            text-align: center;
         }
+        p{
+            font-size: 18px;
+            text-align: center;
+            padding: 0px;
+        }
+        a{
+            font-size: 1.9vw;
+            padding: 15px 20px 15px 20px;
+        }
+    }
+    .attribution{
+        position: relative;
+        top: 40px;
     }
 }
 @media screen and (max-width: 640px){
     body{
         background: url('../images/bg-mobile.svg') no-repeat hsl(257, 40%, 49%);
         background-size: 100%;
-        main{
-            section{
-                h1{
-                    font-size: 5vw;
-                }
-                p{
-                    font-size: 2.9vw;
-                }
-                a{
-                    padding: 12px 20px 12px 20px;
-                    font-size: 2.5vw;
-                    text-align: center;
-                }
-            }
+    }
+    section{
+        h1{
+            font-size: 5vw;
         }
-        footer{
-            .social{
-                margin-top: -40px;
-            }
-            p{
-                font-size: 2.9vw;
-                line-height: 1.7;
-                text-align: center;
-            }
+        p{
+            font-size: 2.9vw;
         }
+        a{
+            padding: 12px 20px 12px 20px;
+            font-size: 2.5vw;
+            text-align: center;
+        }
+    }
+    .social{
+        margin-top: -40px;
+    }
+    .attribution{
+        font-size: 2.9vw;
+        line-height: 1.7;
+        text-align: center;
     }
 }
 @media screen and (max-width: 450px){
-    body{
-        main{
-            img{
-                width: 100%;
-            }
-            section{
-                h1{
-                    @include sech1;
-                }
-                p{
-                    @include secP;
-                }
-                a{
-                    @include register;
-                }
-            }
-        }
-        footer{
-            .social{
-                @include footerSocial;
-                a{
-                    .icons{
-                        @include SocialIcon;
-                    }
-                }
-            }
+    main{
+        img{
+            width: 100%;
         }
     }
+    section{
+        h1{
+            @include sech1;
+        }
+        p{
+            @include secP;
+        }
+        a{
+            @include register;
+        }
+    }
+    .social{
+        @include footerSocial;
+    }
+    .icons{
+        @include SocialIcon;
+    }
 }
+
