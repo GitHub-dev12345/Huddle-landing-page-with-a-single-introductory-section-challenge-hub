@@ -5,6 +5,7 @@
 /* font-family: 'Open Sans', sans-serif; */
 
 // Mixing SCSS 
+// In Main Box (Register) Button Mixing Code
 @mixin anchor {
     width: 29%;
     font-size: 1.3vw;
@@ -20,12 +21,51 @@
     box-shadow: 0px 5px 15px rgba(0,0,0, 0.5);
 }
 
+// Flex-Box Mixing Code
 @mixin flexBox($dr, $jc, $al ) {
     display: flex;
     flex-direction: $dr;
     justify-content: $jc;
     align-items: $al;
 }
+
+// In main h1 tag Mixing Code
+@mixin mainh1 {
+    font-size: 2.8vw;
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    margin: 0px 0px 20px 0px;
+}
+
+// In main P tag Heading Mixing Code
+@mixin mainP {
+    font-size: 1.3vw;
+    color: white;
+    opacity: 0.8;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    padding-right: 35px;
+}
+
+// In footer .social class Mixing Code
+@mixin fosocial {
+    float: right;
+    margin-right: 50px;
+    margin-top: -5px;
+}
+
+// In footer P tag Mixing Code
+@mixin footerP {
+    font-size: 0.95rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    color: wheat;
+    font-weight: bold;
+    word-spacing: 2px;
+    cursor: pointer;
+}
+
 // Nesting SCSS/CSS
 // CSS Reset 
 * {
@@ -64,19 +104,11 @@ body{
             margin: 50px 0px 50px 65px;
 
             h1{
-                font-size: 2.8vw;
-                font-family: 'Poppins', sans-serif; 
-                color: white;
-                margin: 0px 0px 20px 0px;
+                @include mainh1;
             }
+
             p{
-                font-size: 1.3vw;
-                color: white;
-                opacity: 0.8;
-                font-family: 'Open Sans', sans-serif;
-                line-height: 1.5;
-                font-weight: 400;
-                padding-right: 35px;
+                @include mainP;
             }
             // In main box anchor tag scss code 
             a{
@@ -94,9 +126,7 @@ body{
     footer{
         // In Footer Tag .social Box media icon scss code
         .social{
-            float: right;
-            margin-right: 50px;
-            margin-top: -5px;
+            @include fosocial;
             a{
                 .icons{
                     width: 43px;
@@ -113,13 +143,7 @@ body{
         }
         // In footer tag attribution scss code
         p{
-            font-size: 0.95rem;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 30px;
-            color: wheat;
-            font-weight: bold;
-            word-spacing: 2px;
-            cursor: pointer;
+            @include footerP;
 
             a{
                 color: orange;
