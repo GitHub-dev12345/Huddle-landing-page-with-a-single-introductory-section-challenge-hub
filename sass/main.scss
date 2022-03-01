@@ -4,6 +4,28 @@
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'Open Sans', sans-serif; */
 
+// Mixing SCSS 
+@mixin anchor {
+    width: 29%;
+    font-size: 1.3vw;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: hsl(257, 40%, 49%);
+    background-color: whitesmoke;
+    padding: 15px 20px 15px 20px;
+    margin: 20px 5px 20px 5px;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0,0,0, 0.5);
+}
+
+@mixin flexBox($dr, $jc, $al ) {
+    display: flex;
+    flex-direction: $dr;
+    justify-content: $jc;
+    align-items: $al;
+}
 // Nesting SCSS/CSS
 // CSS Reset 
 * {
@@ -11,68 +33,60 @@
     padding: 0;
 }
 
-// Body Design sCSS Code
+// Body Design SCSS Code
 body{
-    max-width: 1440px;
     margin: auto;
     background: url('../images/bg-desktop.svg') no-repeat hsl(257, 40%, 49%);
+    background-size: 90%;
 
     // header tag css
     header{
-        margin-left: 30px;
-        margin-top: 50px;
-        margin-bottom: 70px;
+        margin : 55px 0px 80px 60px;
         font-family: 'Poppins', sans-serif;
 
         // Header Image sCSS Code
         img{
-            width: 200px;
+            width: 240px;
         }
     }
     // main box design scss code
     main{
         display: flex;
-        margin-left: 30px;
+        margin: 50px 50px 0px 70px;
+        img{
+            width: 140%;
+        }
 
         // section box scss code
         section{
             display: flex;
             flex-direction: column;
-            margin: 130px;
-            margin-top: 50px;
-            margin-left: 50px;
+            margin: 50px 0px 50px 65px;
 
             h1{
-                font-size: 2.5rem;
-                color: white;
+                font-size: 2.8vw;
                 font-family: 'Poppins', sans-serif; 
-                margin-bottom: 20px;
+                color: white;
+                margin: 0px 0px 20px 0px;
             }
             p{
-                font-size: 18px;
-                color: wheat;
+                font-size: 1.3vw;
+                color: white;
+                opacity: 0.8;
                 font-family: 'Open Sans', sans-serif;
+                line-height: 1.5;
                 font-weight: 400;
+                padding-right: 35px;
             }
             // In main box anchor tag scss code 
             a{
-                text-decoration: none;
-                text-align: center;
-                font-family:Arial, Helvetica, sans-serif;
-                font-size: 18px;
-                color: hsl(257, 40%, 49%);
-                background-color: whitesmoke;
-                padding: 18px;
-                margin: 20px;
-                margin-left: 0;
-                width: 30%;
-                border-radius: 100px;
-                cursor: pointer;
-                box-shadow: 0px 5px 10px 0px black;
-
+                @include anchor;
                 &:hover{
                     color: white;
                     background-color: hsl(300, 69%, 71%);
+                }
+                &:focus-visible{
+                    opacity: 0.6;
                 }
             }
         }
@@ -83,25 +97,24 @@ body{
             float: right;
             margin-right: 50px;
             margin-top: -5px;
-            span{
-                a{
-                    .icons{
-                        width: 43px;
-                        margin-right: 6px;
-                        cursor: pointer;
-
-                        &:hover{
-                            opacity: 0.5;
-                        }
+            a{
+                .icons{
+                    width: 43px;
+                    margin-right: 6px;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                    &:focus-visible{
+                        opacity: 0.5;
                     }
                 }
             }
         }
-        /* In footer tag attribution scss code */
+        // In footer tag attribution scss code
         p{
             font-size: 0.95rem;
             font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
             padding: 30px;
             color: wheat;
             font-weight: bold;
@@ -117,17 +130,18 @@ body{
                     text-decoration: none;
                     color: red;
                 }
+
+                &:hover{
+                    opacity: 0.5;
+                }
             }
         }
     }
 }
 
-/* Responsive webpage dektop & mobile version scss code */
-@media screen and (max-width: 1300px){
+// Responsive webpage dektop & mobile version scss code
+@media screen and (max-width: 1140px){
     body{
-        background-image: url("images/bg-mobile.svg");
-        width: auto;
-
         header{
             margin: auto;
             padding: 30px;
@@ -142,45 +156,87 @@ body{
             margin: auto;
             padding: 30px;
 
+            img{
+                width: 80%;
+                margin: -20px auto;
+            }
+
             section{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
+                @include flexBox(column, center, center);
+                margin: 50px auto;
                 padding: 20px;
 
-                p{
-                    text-align: center;
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width: 540px){
-    body{
-        main{
-            .box2{
                 h1{
+                    font-size: 35px;
                     text-align: center;
                 }
+
+                p{
+                    font-size: 18px;
+                    text-align: center;
+                    padding: 0px;
+                }
+                a{
+                    font-size: 1.9vw;
+                    padding: 15px 20px 15px 20px;
+                }
+            }
+        }
+        footer{
+            p{
+                position: relative;
+                top: 40px;
             }
         }
     }
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 640px){
     body{
+        background: url('../images/bg-mobile.svg') no-repeat hsl(257, 40%, 49%);
+        background-size: 100%;
         main{
             section{
                 h1{
-                    font-size: 1.4rem;
+                    font-size: 5vw;
+                }
+                p{
+                    font-size: 2.9vw;
+                }
+                a{
+                    padding: 12px 20px 12px 20px;
+                    font-size: 2.5vw;
+                    text-align: center;
+                }
+            }
+        }
+        footer{
+            .social{
+                margin-top: -40px;
+            }
+            p{
+                font-size: 2.9vw;
+                line-height: 1.7;
+                text-align: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 450px){
+    body{
+        main{
+            img{
+                width: 100%;
+            }
+            section{
+                h1{
+                    font-size: 6.5vw;
                     text-align: center;
                     transition: 0.3s; 
                 }
                 p{
-                    font-size: 15px;
+                    font-size: 3.93vw;
                     text-align: center;
-                    margin-bottom: 10px;
+                    margin: 0px 0px 10px 0px;
                     transition: 0.3s;
                 }
                 a{
@@ -198,12 +254,10 @@ body{
                 text-align: center;
                 margin: -30px auto;
                 transition: 0.3s;
-                span{
-                    a{
-                        .icons{
-                            width: 43px;
-                            transition: 0.3s;
-                        }
+                a{
+                    .icons{
+                        width: 43px;
+                        transition: 0.3s;
                     }
                 }
             }

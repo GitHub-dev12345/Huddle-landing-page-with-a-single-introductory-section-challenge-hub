@@ -8,27 +8,29 @@
 }
 
 body {
-  max-width: 1440px;
   margin: auto;
   background: url("../images/bg-desktop.svg") no-repeat #674baf;
+  background-size: 90%;
 }
 
 body header {
-  margin-left: 30px;
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin: 55px 0px 80px 60px;
   font-family: 'Poppins', sans-serif;
 }
 
 body header img {
-  width: 200px;
+  width: 240px;
 }
 
 body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 30px;
+  margin: 50px 50px 0px 70px;
+}
+
+body main img {
+  width: 140%;
 }
 
 body main section {
@@ -39,40 +41,40 @@ body main section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 130px;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin: 50px 0px 50px 65px;
 }
 
 body main section h1 {
-  font-size: 2.5rem;
-  color: white;
+  font-size: 2.8vw;
   font-family: 'Poppins', sans-serif;
-  margin-bottom: 20px;
+  color: white;
+  margin: 0px 0px 20px 0px;
 }
 
 body main section p {
-  font-size: 18px;
-  color: wheat;
+  font-size: 1.3vw;
+  color: white;
+  opacity: 0.8;
   font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
   font-weight: 400;
+  padding-right: 35px;
 }
 
 body main section a {
-  text-decoration: none;
-  text-align: center;
+  width: 29%;
+  font-size: 1.3vw;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
   color: #674baf;
   background-color: whitesmoke;
-  padding: 18px;
-  margin: 20px;
-  margin-left: 0;
-  width: 30%;
+  padding: 15px 20px 15px 20px;
+  margin: 20px 5px 20px 5px;
   border-radius: 100px;
   cursor: pointer;
-  -webkit-box-shadow: 0px 5px 10px 0px black;
-          box-shadow: 0px 5px 10px 0px black;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 body main section a:hover {
@@ -80,8 +82,8 @@ body main section a:hover {
   background-color: #e882e8;
 }
 
-body footer {
-  /* In footer tag attribution scss code */
+body main section a:focus-visible {
+  opacity: 0.6;
 }
 
 body footer .social {
@@ -90,20 +92,23 @@ body footer .social {
   margin-top: -5px;
 }
 
-body footer .social span a .icons {
+body footer .social a .icons {
   width: 43px;
   margin-right: 6px;
   cursor: pointer;
 }
 
-body footer .social span a .icons:hover {
+body footer .social a .icons:hover {
+  opacity: 0.7;
+}
+
+body footer .social a .icons:focus-visible {
   opacity: 0.5;
 }
 
 body footer p {
   font-size: 0.95rem;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
   padding: 30px;
   color: wheat;
   font-weight: bold;
@@ -122,12 +127,11 @@ body footer p a:hover {
   color: red;
 }
 
-/* Responsive webpage dektop & mobile version scss code */
-@media screen and (max-width: 1300px) {
-  body {
-    background-image: url("images/bg-mobile.svg");
-    width: auto;
-  }
+body footer p a:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1140px) {
   body header {
     margin: auto;
     padding: 30px;
@@ -146,6 +150,10 @@ body footer p a:hover {
     margin: auto;
     padding: 30px;
   }
+  body main img {
+    width: 80%;
+    margin: -20px auto;
+  }
   body main section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -160,31 +168,68 @@ body footer p a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: auto;
+    margin: 50px auto;
     padding: 20px;
   }
-  body main section p {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  body main .box2 h1 {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 425px) {
   body main section h1 {
-    font-size: 1.4rem;
+    font-size: 35px;
+    text-align: center;
+  }
+  body main section p {
+    font-size: 18px;
+    text-align: center;
+    padding: 0px;
+  }
+  body main section a {
+    font-size: 1.9vw;
+    padding: 15px 20px 15px 20px;
+  }
+  body footer p {
+    position: relative;
+    top: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    background: url("../images/bg-mobile.svg") no-repeat #674baf;
+    background-size: 100%;
+  }
+  body main section h1 {
+    font-size: 5vw;
+  }
+  body main section p {
+    font-size: 2.9vw;
+  }
+  body main section a {
+    padding: 12px 20px 12px 20px;
+    font-size: 2.5vw;
+    text-align: center;
+  }
+  body footer .social {
+    margin-top: -40px;
+  }
+  body footer p {
+    font-size: 2.9vw;
+    line-height: 1.7;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body main img {
+    width: 100%;
+  }
+  body main section h1 {
+    font-size: 6.5vw;
     text-align: center;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   body main section p {
-    font-size: 15px;
+    font-size: 3.93vw;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 0px 0px 10px 0px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -204,7 +249,7 @@ body footer p a:hover {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body footer .social span a .icons {
+  body footer .social a .icons {
     width: 43px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
