@@ -11,27 +11,27 @@ body {
   background-size: 90%;
 }
 
-body header {
+header {
   margin: 55px 0px 80px 60px;
   font-family: 'Poppins', sans-serif;
 }
 
-body header img {
+header img {
   width: 240px;
 }
 
-body main {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 50px 50px 0px 70px;
 }
 
-body main img {
+main img {
   width: 140%;
 }
 
-body main section {
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,14 +42,14 @@ body main section {
   margin: 50px 0px 50px 65px;
 }
 
-body main section h1 {
+section h1 {
   font-size: 2.8vw;
   font-family: 'Poppins', sans-serif;
   color: white;
   margin: 0px 0px 20px 0px;
 }
 
-body main section p {
+section p {
   font-size: 1.3vw;
   color: white;
   opacity: 0.8;
@@ -59,7 +59,7 @@ body main section p {
   padding-right: 35px;
 }
 
-body main section a {
+section a {
   width: 29%;
   font-size: 1.3vw;
   font-family: Arial, Helvetica, sans-serif;
@@ -74,37 +74,36 @@ body main section a {
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
-
-body main section a:hover {
+section a:hover {
   color: white;
   background-color: #e882e8;
 }
 
-body main section a:focus-visible {
+section a:focus-visible {
   opacity: 0.6;
 }
 
-body footer .social {
+.social {
   float: right;
   margin-right: 50px;
   margin-top: -5px;
 }
 
-body footer .social a .icons {
+.icons {
   width: 43px;
   margin-right: 6px;
   cursor: pointer;
 }
 
-body footer .social a .icons:hover {
+.icons:hover {
   opacity: 0.7;
 }
 
-body footer .social a .icons:focus-visible {
+.icons:focus-visible {
   opacity: 0.5;
 }
 
-body footer p {
+footer p {
   font-size: 0.95rem;
   font-family: Arial, Helvetica, sans-serif;
   padding: 30px;
@@ -114,30 +113,30 @@ body footer p {
   cursor: pointer;
 }
 
-body footer p a {
+p a {
   color: orange;
   font-weight: 600;
   cursor: pointer;
 }
 
-body footer p a:hover {
+p a:hover {
   text-decoration: none;
   color: red;
 }
 
-body footer p a:hover {
+p a:hover {
   opacity: 0.5;
 }
 
 @media screen and (max-width: 1140px) {
-  body header {
+  header {
     margin: auto;
     padding: 30px;
   }
-  body header img {
+  header img {
     width: 150px;
   }
-  body main {
+  main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -148,11 +147,11 @@ body footer p a:hover {
     margin: auto;
     padding: 30px;
   }
-  body main img {
+  main img {
     width: 80%;
     margin: -20px auto;
   }
-  body main section {
+  section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -169,20 +168,20 @@ body footer p a:hover {
     margin: 50px auto;
     padding: 20px;
   }
-  body main section h1 {
+  section h1 {
     font-size: 35px;
     text-align: center;
   }
-  body main section p {
+  section p {
     font-size: 18px;
     text-align: center;
     padding: 0px;
   }
-  body main section a {
+  section a {
     font-size: 1.9vw;
     padding: 15px 20px 15px 20px;
   }
-  body footer p {
+  footer p {
     position: relative;
     top: 40px;
   }
@@ -193,21 +192,21 @@ body footer p a:hover {
     background: url("../images/bg-mobile.svg") no-repeat #674baf;
     background-size: 100%;
   }
-  body main section h1 {
+  section h1 {
     font-size: 5vw;
   }
-  body main section p {
+  section p {
     font-size: 2.9vw;
   }
-  body main section a {
+  section a {
     padding: 12px 20px 12px 20px;
     font-size: 2.5vw;
     text-align: center;
   }
-  body footer .social {
+  .social {
     margin-top: -40px;
   }
-  body footer p {
+  footer p {
     font-size: 2.9vw;
     line-height: 1.7;
     text-align: center;
@@ -215,23 +214,23 @@ body footer p a:hover {
 }
 
 @media screen and (max-width: 450px) {
-  body main img {
+  main img {
     width: 100%;
   }
-  body main section h1 {
+  section h1 {
     font-size: 6.5vw;
     text-align: center;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body main section p {
+  section p {
     font-size: 3.93vw;
     text-align: center;
     margin: 0px 0px 10px 0px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body main section a {
+  section a {
     width: 60%;
     font-size: 12px;
     padding: 10px;
@@ -240,14 +239,14 @@ body footer p a:hover {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body footer .social {
+  .social {
     width: 100%;
     text-align: center;
     margin: -30px auto;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  body footer .social a .icons {
+  .icons {
     width: 43px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
