@@ -115,7 +115,7 @@ section a:focus-visible {
 }
 
 .attribution a {
-  color: orange;
+  color: darkred;
   font-weight: 600;
   cursor: pointer;
 }
@@ -125,7 +125,7 @@ section a:focus-visible {
   color: red;
 }
 
-.attribution a:hover {
+.attribution a:focus-visible {
   opacity: 0.5;
 }
 

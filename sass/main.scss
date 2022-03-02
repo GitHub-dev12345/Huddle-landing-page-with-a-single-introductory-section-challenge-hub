@@ -71,14 +71,14 @@ section{
 .attribution{
     @include footerP;
     a{
-        color: orange;
+        color: darkred;
         font-weight: 600;
         cursor: pointer;
         &:hover{
             text-decoration: none;
             color: red;
         }
-        &:hover{
+        &:focus-visible{
             opacity: 0.5;
         }
     }
